@@ -1,0 +1,106 @@
+:root {
+  --side-bar-padding: 15px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #464646 !important;
+  height: 100%;
+  width: 100%;
+  color: white;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.side-bar {
+  padding: var(--side-bar-padding);
+  box-shadow: 6px 0px 20px 0px #000;
+  height: 100% !important;
+  position: absolute;
+  width: calc(100% / 6); /* WARNING */ 
+  background-color: rgb(var(--bs-dark-rgb));
+  color: white;
+}
+
+.products {
+  padding: var(--side-bar-padding);
+  padding-right: calc(var(--side-bar-padding) - 12px);
+  /* 12px = container-fluid padding to the right of the box */
+}
+
+#sticky-footer {
+  background-color: rgb(var(--bs-dark-rgb));
+  height: 6% !important;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  /* border-top: 1px solid white; just in case */
+  border-top-width: 2px;
+  border-top-style: solid;
+  border-image: linear-gradient(to right, white, transparent, white) 1;
+}
+
+.footer-flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.footer-flex .footer-txt, .footer-flex .footer-copyright {
+  font-size: 0.9em;
+  padding-bottom: 0.5px;
+}
+
+.footer-flex .footer-link {
+  color: white;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.footer-flex .footer-txt {
+  transition: all 0.3s ease-in;
+  text-shadow: 0 0 2px;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-image: linear-gradient(to right, transparent, transparent, transparent) 1;
+}
+
+.footer-flex .footer-txt:hover {
+  transform: scale(1.075);
+  text-shadow: 0 0 7px;
+  border-image: linear-gradient(to right, transparent, white, transparent) 1;
+}
+
+.content {
+    height: 88% !important;
+    width: 100%;
+    position: absolute;
+    color: white;
+}
+
+.content > .container-fluid {
+  padding-left: 0 !important;
+}
+
+.navbar {
+  height: 6% !important;
+  z-index: 1;
+  /*border-bottom: 1px solid white; usual white border*/
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  border-image: linear-gradient(to right, white, transparent, white) 1;
+}
+
